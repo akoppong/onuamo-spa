@@ -11,27 +11,109 @@
     <script src="js/app.js" defer></script>
 </head>
 <body>
-    <div class="aria-live-region" aria-live="polite" role="status"></div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
         <nav class="navbar" aria-label="Main navigation">
-            <a href="#/" class="logo">Onuamo</a>
+            <a href="#home" class="logo">Onuamo</a>
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <div id="nav-links" class="nav-links">
-                <a href="#/about" class="nav-link">About</a>
-                <a href="#/services" class="nav-link">Categories</a>
-                <a href="#/team" class="nav-link">Team</a>
-                <a href="#/contact" class="nav-link cta-button">Contact Us</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Categories</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link cta-button">Contact Us</a>
             </div>
         </nav>
     </header>
 
-    <main id="app-root"></main>
+    <main id="main-content">
+        <section id="home" class="page-container hero">
+            <h1>Onuamo</h1>
+            <p class="section-subtitle">Connecting you directly to the world's finest manufacturing. We eliminate the noise, you get the quality.</p>
+            <a href="#services" class="nav-link cta-button">Explore Categories</a>
+        </section>
+
+        <section id="about" class="page-container">
+            <h2 class="section-title">Bridging Worlds</h2>
+            <p class="section-subtitle">At Onuamo, we serve as the essential bridge between retailers and manufacturers, creating direct connections that eliminate unnecessary intermediaries. Our mission is to streamline the sourcing process.</p>
+            <div class="about-content">
+                <p>We believe in transparency, quality, and partnership. By curating a network of top-rated manufacturers, we provide a platform built on trust. Our rigorous vetting process ensures that every partner meets our high standards for craftsmanship, ethical production, and reliability. This allows retailers to source with confidence, knowing they are getting the best products directly from the source.</p>
+            </div>
+        </section>
+
+        <section id="services" class="page-container">
+            <h2 class="section-title">Our Categories</h2>
+            <p class="section-subtitle">We focus on quality over quantity, offering curated access to premier manufacturers in key sectors.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="icon">👕</div>
+                    <h3>Apparel</h3>
+                    <p>High-quality clothing and accessories sourced directly from trusted manufacturers worldwide.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🍴</div>
+                    <h3>Home & Kitchen</h3>
+                    <p>Essential household, kitchen, and decorative items combining top-tier craftsmanship with modern design.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💡</div>
+                    <h3>Electronics</h3>
+                    <p>Cutting-edge technology products from certified manufacturing partners.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="page-container">
+            <h2 class="section-title">The Core Team</h2>
+            <p class="section-subtitle">Meet the professionals dedicated to forging powerful connections in global manufacturing.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Andrew</h3>
+                    <div class="role">Operations Lead</div>
+                    <p>Ensures seamless connections and operational excellence.</p>
+                </div>
+                <div class="card">
+                    <h3>Kimberly</h3>
+                    <div class="role">Marketing Strategist</div>
+                    <p>Drives marketing initiatives and strategic partnerships.</p>
+                </div>
+                <div class="card">
+                    <h3>Anna</h3>
+                    <div class="role">Product Sourcing Manager</div>
+                    <p>Leads sourcing efforts to ensure product quality standards.</p>
+                </div>
+                <div class="card">
+                    <h3>Francis</h3>
+                    <div class="role">Executive Assistant</div>
+                    <p>Supports the team with coordination and administrative excellence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have a question or a partnership proposal? We’d love to hear from you.</p>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message!');">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+    </main>
 
     <footer class="site-footer-main">
         <div class="container">
