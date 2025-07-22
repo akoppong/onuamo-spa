@@ -114,4 +114,139 @@
         /* Contact */
         .contact-form { max-width: 600px; margin: 0 auto; }
         .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; font-weight
+        .form-group label { display: block; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--shadow-light); border-radius: var(--radius); font-size: 1rem; transition: border var(--transition); }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); }
+        .submit-button { width: 100%; padding: 1rem; background: var(--primary); color: #fff; border: none; border-radius: var(--radius); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: var(--transition); }
+        .submit-button:hover { background: var(--accent); }
+        /* Footer */
+        footer { background: var(--text); color: #fff; padding: 4rem 0; text-align: center; }
+        .social-icons { margin-bottom: 1rem; display: flex; justify-content: center; gap: 1rem; }
+        .social-icon { width: 40px; height: 40px; background: var(--bg-muted); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: var(--transition); }
+        .social-icon:hover { background: var(--accent); }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav id="navbar">
+            <div class="logo">Onuamo</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Categories</a>
+                <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Onuamo</h1>
+                <p>Connecting You Directly to Quality Manufacturing</p>
+                <a href="#about" class="cta-button">Learn More</a>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Onuamo</h2>
+                <p>At Onuamo, we serve as the essential bridge between retailers and manufacturers, creating direct connections that eliminate unnecessary intermediaries. Our mission is to streamline the sourcing process, ensuring retailers have access to quality products while manufacturers can reach their target markets efficiently.</p>
+            </div>
+        </section>
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Our Categories</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="icon">👕</div>
+                        <h3>Apparel</h3>
+                        <p>High-quality clothing and accessories sourced directly from trusted manufacturers worldwide.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🍴</div>
+                        <h3>Home & Kitchen</h3>
+                        <p>Essential household, kitchen, and decorative items combining top-tier craftsmanship with modern design.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">💡</div>
+                        <h3>Electronics</h3>
+                        <p>Cutting-edge technology products from certified manufacturing partners.</p>
+                    </div>
+                </div>
+                <p class="goofy-note">We only showcase the crème de la crème—if your product isn’t rated among the world’s top, we’re sorry, it’s not you, it’s our sky-high standards! 😂</p>
+            </div>
+        </section>
+        <section id="team" class="team">
+            <div class="container">
+                <h2 class="section-title">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="avatar"></div>
+                        <h3>Andrew</h3>
+                        <div class="role">Operations Lead</div>
+                        <p>Ensures seamless connections and operational excellence.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar"></div>
+                        <h3>Kimberly</h3>
+                        <div class="role">Marketing Strategist</div>
+                        <p>Drives marketing initiatives and strategic partnerships.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar"></div>
+                        <h3>Anna</h3>
+                        <div class="role">Product Sourcing Manager</div>
+                        <p>Leads sourcing efforts to ensure product quality standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+                <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">💼</a>
+            </div>
+            <p>&copy; 2024 Onuamo LLC. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Mobile nav toggle
+        const nav = document.getElementById('navbar');
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+        // Scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>
