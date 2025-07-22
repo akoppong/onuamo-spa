@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onuamo - Connecting You Directly to Quality Manufacturing</title>
+    <meta name="description" content="Onuamo connects retailers directly with manufacturers, streamlining sourcing and building transparent, quality-focused partnerships.">
+    <link rel="icon" href="/favicon.ico">
+    <style>
+        /* Core Variables */
+        :root {
+            --primary: #003366;
+            --accent: #0070f3;
+            --text: #222222;
+            --muted: #555555;
+            --bg-light: #ffffff;
+            --bg-muted: #f4f4f4;
+            --radius: 12px;
+            --shadow-light: rgba(0,0,0,0.05);
+            --shadow: 0 4px 16px var(--shadow-light);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text);
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+        a { color: inherit; text-decoration: none; transition: var(--transition); }
+        a:hover { color: var(--accent); }
+        button, .cta-button { cursor: pointer; }
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: #fff;
+            padding: 8px;
+            z-index: 1001;
+            transition: top 0.3s;
+        }
+        .skip-link:focus { top: 0; }
+        /* Header & Nav */
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: transparent;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        nav.scrolled {
+            background: var(--bg-light);
+            box-shadow: 0 2px 8px var(--shadow-light);
+        }
+        .logo { font-size: 1.4rem; font-weight: 600; color: var(--text); }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a { font-weight: 500; position: relative; }
+        .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s; }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text); }
+        @media (max-width: 768px) {
+            .nav-toggle { display: block; }
+            .nav-links { display: none; flex-direction: column; background: var(--bg-light); position: absolute; top: 100%; left: 0; width: 100%; padding: 1rem 2rem; }
+            .nav-links.open { display: flex; }
+        }
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('https://via.placeholder.com/1600x900') center/cover no-repeat;
+            position: relative;
+            padding-top: 80px;
+        }
+        .hero::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.4); }
+        .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 0 1rem; }
+        .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; margin-bottom: 1rem; color: #fff; }
+        .hero-content p { font-size: clamp(1rem, 2.5vw, 1.25rem); margin-bottom: 2rem; color: #eee; }
+        .cta-button { display: inline-block; padding: 1rem 2rem; background: var(--accent); color: #fff; border-radius: var(--radius); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+        /* Sections */
+        main { padding-top: 80px; }
+        section { padding: 6rem 0; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        .section-title { text-align: center; font-size: 2.5rem; font-weight: 600; color: var(--text); margin-bottom: 2rem; }
+        @media (max-width: 768px) { .section-title { font-size: 2rem; } section { padding: 4rem 0; } }
+        /* About */
+        .about { background: var(--bg-muted); }
+        .about p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--muted); }
+        /* Services */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .service-card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 2rem; text-align: center; transition: var(--transition); }
+        .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px var(--shadow-light); }
+        .service-card .icon { width: 64px; height: 64px; margin: 0 auto 1rem; background: var(--bg-muted); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+        .service-card h3 { font-size: 1.25rem; font-weight: 600; color: var(--text); margin-bottom: 0.75rem; }
+        .service-card p { font-size: 1rem; color: var(--muted); line-height: 1.6; }
+        .goofy-note { text-align: center; margin-top: 1.5rem; font-style: italic; color: var(--muted); }
+        /* Team */
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+        .team-member { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 2rem; text-align: center; transition: var(--transition); }
+        .team-member:hover { transform: translateY(-4px); }
+        .avatar { width: 120px; height: 120px; margin: 0 auto 1rem; background: var(--bg-muted); border-radius: 50%; }
+        .team-member h3 { font-size: 1.2rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
+        .team-member .role { font-size: 0.9rem; color: var(--accent); margin-bottom: 1rem; }
+        .team-member p { font-size: 0.95rem; color: var(--muted); line-height: 1.5; }
+        /* Contact */
+        .contact-form { max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight
