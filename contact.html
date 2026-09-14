@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://onuamo.com/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Onuamo LLC">
+<meta property="og:title" content="Contact Onuamo LLC">
+<meta property="og:description" content="Contact Onuamo LLC for brand partnerships and wholesale inquiries.">
+<meta property="og:url" content="https://onuamo.com/contact.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="styles.css">
+<title>Contact Onuamo LLC</title>
+<meta name="description" content="Contact Onuamo LLC for brand partnerships and wholesale inquiries.">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap">
+      <a class="wordmark" href="index.html">Onuamo <span>LLC</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="categories.html">Categories</a>
+        <a href="partners.html">Brand partners</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="band band-first" style="padding-top:74px;">
+      <div class="wrap">
+        <h1 style="max-width:12ch;">Contact</h1>
+        <div style="margin-top:44px;">
+          <div class="details">
+            <div>
+              <h3>Brands and wholesale</h3>
+              <p><a href="mailto:partnerships@onuamo.com">partnerships@onuamo.com</a><br><a href="tel:+18319021564">(831) 902-1564</a></p>
+            </div>
+            <div>
+              <h3>General</h3>
+              <p><a href="mailto:hello@onuamo.com">hello@onuamo.com</a></p>
+            </div>
+            <div>
+              <h3>Address</h3>
+              <p>Onuamo LLC<br>4230 E. River Road<br>Moraine, OH 45439</p>
+            </div>
+            <div>
+              <h3>Hours</h3>
+              <p>Monday&ndash;Friday<br>9:00&nbsp;AM &ndash; 5:00&nbsp;PM ET</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wire this action to Formspree / Netlify Forms before launch, then send a test submission. -->
+        <form class="form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST">
+          <div class="form-pair">
+            <div class="field">
+              <label for="cname">Name</label>
+              <input type="text" id="cname" name="name" required>
+            </div>
+            <div class="field">
+              <label for="cemail">Email</label>
+              <input type="email" id="cemail" name="email" required>
+            </div>
+          </div>
+          <div class="form-pair">
+            <div class="field">
+              <label for="ccompany">Company or brand</label>
+              <input type="text" id="ccompany" name="company">
+            </div>
+            <div class="field">
+              <label for="ccategory">Category</label>
+              <select id="ccategory" name="category">
+                <option value="">Select one</option>
+                <option>Health &amp; Household</option>
+                <option>Home &amp; Kitchen</option>
+                <option>Grocery &amp; Gourmet Food</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cmessage">Message</label>
+            <textarea id="cmessage" name="message" required></textarea>
+          </div>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+          <button class="btn" type="submit">Send message</button>
+          <p class="form-note">One business day, straight answer either way.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="foot">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <a class="wordmark" href="index.html">Onuamo <span>LLC</span></a>
+          <p style="margin-top:14px;max-width:30ch;">A multi-channel online retailer in Health &amp; Household, Home &amp; Kitchen, and Grocery.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:partnerships@onuamo.com">partnerships@onuamo.com</a></li>
+            <li><a href="tel:+18319021564">(831) 902-1564</a></li>
+            <li>Mon&ndash;Fri, 9:00&nbsp;AM&nbsp;&ndash;&nbsp;5:00&nbsp;PM ET</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Address</h4>
+          <ul>
+            <li>Onuamo LLC</li>
+            <li>4230 E. River Road</li>
+            <li>Moraine, OH 45439</li>
+          </ul>
+        </div>
+      </div>
+      <div class="base">
+        <span>&copy; <span id="yr">2026</span> Onuamo LLC</span>
+        <span>Family-owned since 2021</span>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
